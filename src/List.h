@@ -14,6 +14,17 @@ class List
 		List();
 		void add(Element* element);
 		void remove(int index);
+
+		 Element* getFirst()
+	 {		return _first;	}
+
+
+
+	 Element* getLast()
+	 {		return _last;	}
+
+
+
 	private:
 		Element* _first;
 		Element* _last;

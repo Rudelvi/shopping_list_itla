@@ -13,10 +13,33 @@ class Element
 	public:
 		Element(std::string name);
 
+    const std::string& getName() const {
+		return _name;
+	}
+
+	void setName(const std::string& name) {
+		_name = name;
+	}
+
+	 Element* getNext()
+	{		return _next;	}
+
+	void setNext( Element*& next) {
+		_next = next;
+	}
+
 	private:
 		Element* _next;
 		std::string _name;
 		//This means that List can access to all private members of this class
+
+		const std::string& getNombre() const {
+				return _name;
+			}
+
+			void setNombre(const std::string& name) {
+				_name = name;
+			}
 		friend class List;
 };
 

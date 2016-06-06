@@ -68,19 +68,39 @@ void Menu::routeAction(int option)
 void Menu::listItems()
 {
 	//TODO: Implement this
-	cout << "Implement  Menu::listItems" << endl;
+	List* list = new List();
+	Element* i = list -> getFirst();
+		while(i != NULL)
+		{
+			cout << i -> getName() << endl;
+			i = i -> getNext();
+		}
+	//cout << "Implement  Menu::listItems" << endl;
 }
 
 void Menu::addItems()
 {
 	//TODO: Implement this
-	cout << "Implement  Menu::addItems" << endl;
+	string name;
+	cout << "Write the article's name:"<< endl;
+	cin >> name;
+	Element* article = new Element(name);
+	List* list = new List();
+	list -> add(article);
+	//cout << "Implement  Menu::addItems" << endl;
 }
 
 void Menu::removeItems()
 {
 	//TODO: Implement this
-	cout << "Implement  Menu::removeItems" << endl;
+	List* list = new List();
+
+	int ind;
+	cout<< "Choose the article to delete:" <<endl;
+	cin>> ind;
+	list -> remove(ind);
+	cout<<"Article deleted successfully"<<endl;
+	//cout << "Implement  Menu::removeItems" << endl;
 }
 
 void Menu::show()
